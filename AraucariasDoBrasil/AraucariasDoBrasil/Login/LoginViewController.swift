@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         alert = Alert(controller: self)
+        screen?.delegate(delegate: self)
         self.navigationItem.hidesBackButton = true
     }
 }
@@ -29,7 +30,6 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginScreenDelegate {
     func tappedBackButton() {
         let viewcontroller = HomeViewController()
-//        self.navigationController?.pushViewController(viewcontroller, animated: true)
         self.navigationController?.popViewController(animated: true)
         
     }

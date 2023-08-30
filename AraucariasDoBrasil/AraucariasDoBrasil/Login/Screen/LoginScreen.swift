@@ -129,6 +129,13 @@ class LoginScreen: UIView {
         return button
     }()
     
+    lazy var lineView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(self.subImageView)
@@ -141,6 +148,7 @@ class LoginScreen: UIView {
         self.addSubview(self.subLoginView)
         self.addSubview(self.loginButton)
         self.addSubview(self.backButton)
+        self.addSubview(self.lineView)
         configConstraints()
     }
     
@@ -159,7 +167,7 @@ class LoginScreen: UIView {
             self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: -15),
             self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
-            self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 55),
             self.logoAppImageView.heightAnchor.constraint(equalToConstant: 160),
             self.logoAppImageView.widthAnchor.constraint(equalToConstant: 160),
             self.logoAppImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -194,6 +202,11 @@ class LoginScreen: UIView {
             self.subLoginView.trailingAnchor.constraint(equalTo: self.loginButton.trailingAnchor),
             self.subLoginView.topAnchor.constraint(equalTo: self.loginButton.topAnchor),
             self.subLoginView.bottomAnchor.constraint(equalTo: self.loginButton.bottomAnchor),
+            
+            self.lineView.topAnchor.constraint(equalTo: self.subLoginView.bottomAnchor, constant: 48),
+            self.lineView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 64),
+            self.lineView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -64),
+            self.lineView.heightAnchor.constraint(equalToConstant: 0.5),
             
         ])
     }
