@@ -9,6 +9,9 @@ import UIKit
 
 protocol LoginScreenDelegate: AnyObject {
     func tappedBackButton()
+    func tappedRecoverPasswordButton()
+    func tappedLoginButton()
+    func tappedRegisterButton()
 }
 
 class LoginScreen: UIView {
@@ -72,7 +75,7 @@ class LoginScreen: UIView {
         txt.backgroundColor = .lightGray
         txt.borderStyle = .roundedRect
         txt.keyboardType = .emailAddress
-        txt.attributedPlaceholder = NSAttributedString(string: "Login", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white.withAlphaComponent(0.4)])
+        txt.attributedPlaceholder = NSAttributedString(string: "Digite seu email", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white.withAlphaComponent(0.4)])
         txt.textColor = .white
         txt.clipsToBounds = true
         txt.layer.cornerRadius = 12
@@ -89,7 +92,7 @@ class LoginScreen: UIView {
         txt.borderStyle = .roundedRect
         txt.keyboardType = .default
         txt.isSecureTextEntry = true
-        txt.attributedPlaceholder = NSAttributedString(string: "Senha", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.4)])
+        txt.attributedPlaceholder = NSAttributedString(string: "Digite sua senha", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.4)])
         txt.textColor = .white
         txt.clipsToBounds = true
         txt.layer.cornerRadius = 12
@@ -104,8 +107,13 @@ class LoginScreen: UIView {
         button.setTitle("Recuperar senha", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         button.setTitleColor(UIColor(red: 231/255, green: 48/255, blue: 214/255, alpha: 1.0), for: .normal)
+        button.addTarget(self, action: #selector(tappedRecoverPasswordButton), for: .touchUpInside)
         return button
     }()
+    
+    @objc func tappedRecoverPasswordButton() {
+        delegate?.tappedRecoverPasswordButton()
+    }
     
     lazy var subLoginView: UIImageView = {
         let image = UIImageView()
@@ -126,8 +134,31 @@ class LoginScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.titleLabel?.textAlignment = .center
+        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
+    
+    @objc func tappedLoginButton() {
+        delegate?.tappedLoginButton()
+    }
+    
+    lazy var registerButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Cadastre-se", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        button.setTitleColor(.white, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.backgroundColor = UIColor(red: 230/255, green: 0/255, blue: 127/255, alpha: 1.0)
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        return button
+        
+    }()
+    
+    @objc func tappedRegisterButton() {
+        delegate?.tappedRegisterButton()
+    }
     
     lazy var lineView: UIView = {
         let view = UIView()
@@ -148,6 +179,7 @@ class LoginScreen: UIView {
         self.addSubview(self.subLoginView)
         self.addSubview(self.loginButton)
         self.addSubview(self.backButton)
+        self.addSubview(self.registerButton)
         self.addSubview(self.lineView)
         configConstraints()
     }
@@ -207,6 +239,11 @@ class LoginScreen: UIView {
             self.lineView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 64),
             self.lineView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -64),
             self.lineView.heightAnchor.constraint(equalToConstant: 0.5),
+            
+            self.registerButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -90),
+            self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 100),
+            self.registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -100),
+            self.registerButton.heightAnchor.constraint(equalToConstant: 40),
             
         ])
     }

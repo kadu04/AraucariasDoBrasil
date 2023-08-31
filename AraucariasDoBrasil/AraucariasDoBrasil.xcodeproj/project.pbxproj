@@ -18,6 +18,15 @@
 		56B7B1652A9FD44A006DCFF2 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B1642A9FD44A006DCFF2 /* UIViewController + Extension.swift */; };
 		56B7B1682A9FD636006DCFF2 /* AlertTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B1672A9FD636006DCFF2 /* AlertTexts.swift */; };
 		56B7B16A2A9FD662006DCFF2 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B1692A9FD662006DCFF2 /* Alert.swift */; };
+		56B7B16C2A9FF9E4006DCFF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56B7B16B2A9FF9E3006DCFF2 /* GoogleService-Info.plist */; };
+		56B7B16F2A9FFBEC006DCFF2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 56B7B16E2A9FFBEC006DCFF2 /* FirebaseAuth */; };
+		56B7B1712A9FFBEC006DCFF2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 56B7B1702A9FFBEC006DCFF2 /* FirebaseFirestore */; };
+		56B7B1732A9FFBEC006DCFF2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 56B7B1722A9FFBEC006DCFF2 /* FirebaseFirestoreSwift */; };
+		56B7B1752A9FFBEC006DCFF2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 56B7B1742A9FFBEC006DCFF2 /* FirebaseStorage */; };
+		56B7B1772AA013B8006DCFF2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B1762AA013B8006DCFF2 /* RecoverPasswordViewController.swift */; };
+		56B7B17A2AA013F7006DCFF2 /* RecoverPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B1792AA013F7006DCFF2 /* RecoverPasswordScreen.swift */; };
+		56B7B17D2AA1089F006DCFF2 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B17C2AA1089F006DCFF2 /* RegisterScreen.swift */; };
+		56B7B17F2AA108BF006DCFF2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B17E2AA108BF006DCFF2 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +43,11 @@
 		56B7B1642A9FD44A006DCFF2 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		56B7B1672A9FD636006DCFF2 /* AlertTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTexts.swift; sourceTree = "<group>"; };
 		56B7B1692A9FD662006DCFF2 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		56B7B16B2A9FF9E3006DCFF2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56B7B1762AA013B8006DCFF2 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		56B7B1792AA013F7006DCFF2 /* RecoverPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordScreen.swift; sourceTree = "<group>"; };
+		56B7B17C2AA1089F006DCFF2 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		56B7B17E2AA108BF006DCFF2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B7B16F2A9FFBEC006DCFF2 /* FirebaseAuth in Frameworks */,
+				56B7B1752A9FFBEC006DCFF2 /* FirebaseStorage in Frameworks */,
+				56B7B1712A9FFBEC006DCFF2 /* FirebaseFirestore in Frameworks */,
+				56B7B1732A9FFBEC006DCFF2 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +84,8 @@
 		56B7B1432A9E870E006DCFF2 /* AraucariasDoBrasil */ = {
 			isa = PBXGroup;
 			children = (
+				56B7B17B2AA1087D006DCFF2 /* Register */,
+				56B7B1782AA013C9006DCFF2 /* RecoverPassword */,
 				56B7B1662A9FD60B006DCFF2 /* Alert */,
 				56B7B1632A9FD417006DCFF2 /* Extension */,
 				56B7B15D2A9F89BB006DCFF2 /* Login */,
@@ -75,6 +95,7 @@
 				56B7B14D2A9E8710006DCFF2 /* Assets.xcassets */,
 				56B7B14F2A9E8710006DCFF2 /* LaunchScreen.storyboard */,
 				56B7B1522A9E8710006DCFF2 /* Info.plist */,
+				56B7B16B2A9FF9E3006DCFF2 /* GoogleService-Info.plist */,
 			);
 			path = AraucariasDoBrasil;
 			sourceTree = "<group>";
@@ -130,6 +151,24 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		56B7B1782AA013C9006DCFF2 /* RecoverPassword */ = {
+			isa = PBXGroup;
+			children = (
+				56B7B1762AA013B8006DCFF2 /* RecoverPasswordViewController.swift */,
+				56B7B1792AA013F7006DCFF2 /* RecoverPasswordScreen.swift */,
+			);
+			path = RecoverPassword;
+			sourceTree = "<group>";
+		};
+		56B7B17B2AA1087D006DCFF2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				56B7B17C2AA1089F006DCFF2 /* RegisterScreen.swift */,
+				56B7B17E2AA108BF006DCFF2 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +185,12 @@
 			dependencies = (
 			);
 			name = AraucariasDoBrasil;
+			packageProductDependencies = (
+				56B7B16E2A9FFBEC006DCFF2 /* FirebaseAuth */,
+				56B7B1702A9FFBEC006DCFF2 /* FirebaseFirestore */,
+				56B7B1722A9FFBEC006DCFF2 /* FirebaseFirestoreSwift */,
+				56B7B1742A9FFBEC006DCFF2 /* FirebaseStorage */,
+			);
 			productName = AraucariasDoBrasil;
 			productReference = 56B7B1412A9E870E006DCFF2 /* AraucariasDoBrasil.app */;
 			productType = "com.apple.product-type.application";
@@ -174,6 +219,9 @@
 				Base,
 			);
 			mainGroup = 56B7B1382A9E870E006DCFF2;
+			packageReferences = (
+				56B7B16D2A9FFBEC006DCFF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 56B7B1422A9E870E006DCFF2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B7B16C2A9FF9E4006DCFF2 /* GoogleService-Info.plist in Resources */,
 				56B7B1512A9E8710006DCFF2 /* LaunchScreen.storyboard in Resources */,
 				56B7B14E2A9E8710006DCFF2 /* Assets.xcassets in Resources */,
 			);
@@ -200,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B7B17D2AA1089F006DCFF2 /* RegisterScreen.swift in Sources */,
 				56B7B16A2A9FD662006DCFF2 /* Alert.swift in Sources */,
 				56B7B1622A9F8A10006DCFF2 /* LoginViewController.swift in Sources */,
 				56B7B15C2A9E8C4B006DCFF2 /* HomeScreen.swift in Sources */,
@@ -208,7 +258,10 @@
 				56B7B1652A9FD44A006DCFF2 /* UIViewController + Extension.swift in Sources */,
 				56B7B1452A9E870E006DCFF2 /* AppDelegate.swift in Sources */,
 				56B7B1472A9E870E006DCFF2 /* SceneDelegate.swift in Sources */,
+				56B7B1772AA013B8006DCFF2 /* RecoverPasswordViewController.swift in Sources */,
+				56B7B17F2AA108BF006DCFF2 /* RegisterViewController.swift in Sources */,
 				56B7B15F2A9F89D7006DCFF2 /* LoginScreen.swift in Sources */,
+				56B7B17A2AA013F7006DCFF2 /* RecoverPasswordScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,9 +415,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = RicardoMassaki.AraucariasDoBrasil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -390,9 +446,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = RicardoMassaki.AraucariasDoBrasil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -418,6 +477,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56B7B16D2A9FFBEC006DCFF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56B7B16E2A9FFBEC006DCFF2 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56B7B16D2A9FFBEC006DCFF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		56B7B1702A9FFBEC006DCFF2 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56B7B16D2A9FFBEC006DCFF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		56B7B1722A9FFBEC006DCFF2 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56B7B16D2A9FFBEC006DCFF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		56B7B1742A9FFBEC006DCFF2 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56B7B16D2A9FFBEC006DCFF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56B7B1392A9E870E006DCFF2 /* Project object */;
 }
