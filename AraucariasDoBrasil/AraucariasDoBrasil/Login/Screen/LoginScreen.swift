@@ -39,6 +39,7 @@ class LoginScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "gradient background")
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
@@ -142,30 +143,29 @@ class LoginScreen: UIView {
         delegate?.tappedLoginButton()
     }
     
-    lazy var registerButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Cadastre-se", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        button.setTitleColor(.white, for: .normal)
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 8
-        button.backgroundColor = UIColor(red: 230/255, green: 0/255, blue: 127/255, alpha: 1.0)
-        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
-        return button
-        
-    }()
-    
-    @objc func tappedRegisterButton() {
-        delegate?.tappedRegisterButton()
-    }
-    
     lazy var lineView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
         return view
     }()
+    
+    lazy var registerButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Cadastrar", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        button.setTitleColor(.white, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.backgroundColor = UIColor(red: 230/255, green: 0/255, blue: 27/255, alpha: 1.0)
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func tappedRegisterButton() {
+        delegate?.tappedRegisterButton()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -37,9 +37,7 @@ extension LoginViewController: LoginScreenDelegate {
         self.navigationController?.pushViewController(viewcontroller, animated: true)
     }
     
-    func tappedLoginButton() {
-        makeLogin()
-    }
+    
     
     func tappedRecoverPasswordButton() {
         let viewcontroller = RecoverPasswordViewController()
@@ -50,6 +48,10 @@ extension LoginViewController: LoginScreenDelegate {
         let viewcontroller = HomeViewController()
         self.navigationController?.popViewController(animated: true)
         
+    }
+    
+    func tappedLoginButton() {
+        makeLogin()
     }
     
     private func makeLogin() {
